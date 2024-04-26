@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Virtual Cake for You!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style/cake_style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1/dist/confetti.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="path/to/your/custom/confetti/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="path/to/your/main/script.js"></script>
+    <script src="./script/flame_function.js"></script>
+    <script>
+      // Function to add a candle
+      function addCandle() {
+        const candleCountElement = document.getElementById("candleCount");
+        let candleCount = parseInt(candleCountElement.textContent, 10);
+    
+        // Increase the candle count
+        candleCount++;
+        candleCountElement.textContent = candleCount;
+    
+        // Trigger confetti animation for individual candle addition
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      }
+    
+      // Function to trigger continuous background confetti animation
+      function continuousConfetti() {
+        setInterval(() => {
+          confetti({
+            particleCount: 5,
+            spread: 180,
+            origin: { y: 0.6 }
+          });
+        }, 100); // Adjust the interval (in milliseconds) to change the speed of confetti falling
+      }
+    
+      // Event listener for adding candles
+      document.querySelector(".candle-count-display").addEventListener("click", addCandle);
+    
+      // Start continuous background confetti animation
+      continuousConfetti();
+    </script>
+    
+
+
+
+  </head>
+  <body>
+
+    <div class="candle-count-display">
+        <h3>Tap to add candles</h1>
+     
+      Candles: <span id="candleCount">0</span>
+    </div>
+    <div class="cake">
+      <canvas id="confetti-canvas"></canvas>
+   
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-middle"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+      <div class="drip drip1"></div>
+      <div class="drip drip2"></div>
+      <div class="drip drip3"></div>
+    
+    </div>
+ 
+    
+  </body>
+</html>
