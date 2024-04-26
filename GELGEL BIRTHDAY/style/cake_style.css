@@ -1,3 +1,4 @@
+
 body {
   background-image: linear-gradient(to right, #fffbd5, #b20a2c);
 }
@@ -129,7 +130,7 @@ body {
     top: 2px;
     left: 5px;
     background-color: #f0e4d0;
-    width: 340px;
+    width: 240px;
     height: 90px;
     border-radius: 50%;
   }
@@ -147,12 +148,13 @@ body {
   }
   
   .drip {
-   display: block;
+    display: block;
     width: 50px;
-    height: 70px;
+    height: 60px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    background-color: #f0e4d0; 
+    background-color:  #f0e4d0;
+  ;
   }
   
   .drip1 {
