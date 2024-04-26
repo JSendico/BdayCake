@@ -42,8 +42,8 @@ body {
   @media (max-width: 768px) {
     /* Styles for screens smaller than 768px (tablet and mobile) */
     .cake {
-      width: 200px;
-      height: 160px;
+      width: 100%;
+      height: 100%;
     }
     
     .candle-count-display {
